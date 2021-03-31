@@ -17,7 +17,6 @@ public static void main(String[] args) {
         int my_result = 0;
 	BigInteger n;
 	int it;
-	try{
 			//Scanner sc = new Scanner(new File(info.curtask.findFile("Solovey.data")));
 			System.out.print("Enter n for factorization: ");
 			Scanner sc = new Scanner(System.in);
@@ -26,8 +25,6 @@ public static void main(String[] args) {
 			System.out.print("Enter it for iteration: ");
 			sc = new Scanner(System.in);
 			it = sc.nextInt();
-	}
-		catch (IOException e) {e.printStackTrace(); return;}
 	long startTime = System.nanoTime();
 	System.out.println("Iterations: " + it);
 	point p = info.createPoint();
