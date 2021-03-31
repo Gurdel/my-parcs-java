@@ -18,12 +18,17 @@ public static void main(String[] args) {
 	BigInteger n;
 	int it;
 	try{
-			Scanner sc = new Scanner(new File(info.curtask.findFile("Solovey.data")));
+			//Scanner sc = new Scanner(new File(info.curtask.findFile("Solovey.data")));
+			System.out.print("Enter n for factorization: ");
+			Scanner sc = new Scanner(System.in);
 			n = sc.nextBigInteger();
+			System.out.println("N is: " + n);
+			System.out.print("Enter it for iteration: ");
+			Scanner sc = new Scanner(System.in);
 			it = sc.nextInt();
 	}
 		catch (IOException e) {e.printStackTrace(); return;}
-        System.out.println("Number: " + n);
+	long startTime = System.nanoTime();
 	System.out.println("Iterations: " + it);
 	point p = info.createPoint();
         channel c = p.createChannel();
@@ -39,7 +44,8 @@ public static void main(String[] args) {
 	}
 	else
 	{	System.out.println("non-prime");}
-		
+	double estimatedTime = (double) (System.nanoTime() - startTime) / 1000000000;
+	System.out.println("\nTime total: " + estimatedTime);
 	try {
           PrintWriter out = new PrintWriter(new FileWriter(info.curtask.addPath("Solovey.res")));
           out.println(my_result);
