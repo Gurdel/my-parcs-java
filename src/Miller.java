@@ -24,7 +24,7 @@ public static void main(String[] args) {
 			n = sc.nextBigInteger();
 			System.out.println("N is: " + n);
 			System.out.print("Enter it for iteration: ");
-			Scanner sc = new Scanner(System.in);
+			sc = new Scanner(System.in);
 			it = sc.nextInt();
 	}
 		catch (IOException e) {e.printStackTrace(); return;}
