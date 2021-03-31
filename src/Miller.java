@@ -18,7 +18,7 @@ public static void main(String[] args) {
 	BigInteger n;
 	int it;
 			//Scanner sc = new Scanner(new File(info.curtask.findFile("Solovey.data")));
-			System.out.print("Enter enter number: ");
+			System.out.print("Enter any number to check: ");
 			Scanner sc = new Scanner(System.in);
 			n = sc.nextBigInteger();
 			System.out.println("N is: " + n);
