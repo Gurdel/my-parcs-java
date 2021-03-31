@@ -18,11 +18,11 @@ public static void main(String[] args) {
 	BigInteger n;
 	int it;
 			//Scanner sc = new Scanner(new File(info.curtask.findFile("Solovey.data")));
-			System.out.print("Enter n for factorization: ");
+			System.out.print("Enter enter number: ");
 			Scanner sc = new Scanner(System.in);
 			n = sc.nextBigInteger();
 			System.out.println("N is: " + n);
-			System.out.print("Enter it for iteration: ");
+			System.out.print("Enter number of iterations: ");
 			sc = new Scanner(System.in);
 			it = sc.nextInt();
 	long startTime = System.nanoTime();
