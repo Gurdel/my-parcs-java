@@ -27,13 +27,34 @@ public static void main(String[] args) {
 			it = sc.nextInt();
 	long startTime = System.nanoTime();
 	System.out.println("Iterations: " + it);
+
+        /*
+
 	point p = info.createPoint();
         channel c = p.createChannel();
         p.execute("Algo");
         c.write(n);
         c.write(it);
-	System.out.println("Waiting for result...");
-	my_result = c.readInt();
+
+		System.out.println("Waiting for result...");
+		my_result = c.readInt();
+         */
+
+		point p1 = info.createPoint();
+		channel c1 = p1.createChannel();
+
+		p1.execute("Algo");
+		c1.write(n);
+		c1.write(it/2);
+		point p2 = info.createPoint();
+		channel c2 = p2.createChannel();
+		p2.execute("Algo");
+		c2.write(n);
+		c2.write(it/2);
+
+		int r1=c1.readInt();
+		int r2=c2.readInt();
+		my_result=(r1+r2) / 2;
 	System.out.println("Result found.");
 	if (my_result == 1)
 	{
