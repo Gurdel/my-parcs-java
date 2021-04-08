@@ -28,16 +28,17 @@ public static void main(String[] args) {
 	long startTime = System.nanoTime();
 	System.out.println("Iterations: " + it);
 
-		point p = info.createPoint();
-		channel c = p.createChannel();
-		p.execute("Algo");
-		c.write(n);
-		c.write(it);
+        /*
+
+	point p = info.createPoint();
+        channel c = p.createChannel();
+        p.execute("Algo");
+        c.write(n);
+        c.write(it);
 
 		System.out.println("Waiting for result...");
 		my_result = c.readInt();
-
-        /*
+         */
 
 		point p1 = info.createPoint();
 		channel c1 = p1.createChannel();
@@ -54,7 +55,6 @@ public static void main(String[] args) {
 		int r1=c1.readInt();
 		int r2=c2.readInt();
 		my_result=(r1+r2) / 2;
-         */
 	System.out.println("Result found.");
 	if (my_result == 1)
 	{
